@@ -3,6 +3,11 @@
 
 ## Project Title: 
 * Flag Game
+
+## Project Aim: 
+* The aim of this assignment is to design a GeoGame with HTML, CSS and JS.A geo-game is an interactive game, in
+which a user interacts with the browser has a geo-component and tries to achieve a
+high-score.
 ## How to Play
 1. Open the game in your web browser.
 2. Click on the flag displayed to guess the country.

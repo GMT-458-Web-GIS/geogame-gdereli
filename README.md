@@ -1,1 +1,9 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/ATV5e7Id)
+![alt text](https://www.freelogovectors.net/wp-content/uploads/2020/07/hacettepe-universitesi-logo-768x178.png)
+# GMT458 INTERNET BASED GEOGRAPHICAL INFORMATION SYSTEMS
+
+
+## How to Play
+1. Open the game in your web browser.
+2. Click on the flag displayed to guess the country.
+3. Receive feedback on your guess and watch your score change.
+4. Click the "New Game" button to reset the game and try again.

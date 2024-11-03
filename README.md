@@ -22,3 +22,7 @@ high-score.
   - Click on the flag displayed to guess the country.<br>
   - Receive feedback on your guess and watch your score change.<br>
   - Click the "New Game" button to reset the game and try again.<br>
+
+## How the Game will look?
+![image](https://github.com/user-attachments/assets/8c817fe3-b240-44ec-adfb-d7769e9b6c88)
+

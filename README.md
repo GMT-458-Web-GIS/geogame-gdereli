@@ -11,12 +11,12 @@ which a user interacts with the browser has a geo-component and tries to achieve
 high-score.
 
 ## Features of the Game
-  - The user clicks on the “New Game” button to start the game. This will initialize the game and display a random flag to the user. <br>
-  - In the game, the user is shown a random flag. The user guesses which country this flag belongs to and drags the flag over the country they guessed.<br>
-  - After the user has guessed, the system checks the guess.<br>
-  - If the guess is correct, the score increases. If the guess is wrong, the score decreases.<br>
-  - For each correct guess, the score is increased by 10%. For wrong guesses, it is reduced by 10%. The user can continuously track their current score based on the progress of the game.<br>
-  - When the score is zero, the game ends and the user can start a new game by clicking on the “New Game” button.<br>
+- To start the game, the user clicks on the ‘New Game’ button and the player will be redirected to the game page. This will start the game and show the user a random flag.<br>
+- In the game the user is shown a random flag. The user guesses which country this flag belongs to and drags the flag over the country they guessed.<br>
+- After the user guesses, the system checks the guess.<br>
+- If the guess is correct, the score increases. If the guess is wrong, the score decreases.<br>
+- For each correct guess, the score is increased by 10%. For wrong predictions, it is decreased by 10% and the player is notified. The score cannot exceed 100%. The user can continuously monitor his/her current score depending on the progress of the game.<br>
+- When the score is zero or 60 seconds are up, the game ends and the user can start a new game by clicking the ‘New Game’ button.
 
 ## How to Play
   - Open the game in your web browser.<br>

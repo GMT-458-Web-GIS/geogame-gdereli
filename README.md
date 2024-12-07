@@ -25,6 +25,8 @@ high-score.
   - Click the "New Game" button to reset the game and try again.<br>
 
 ## Three Event Handlers
+1- Drag Start Event (dragstart):
+* Purpose: This event handler is attached to each flag element. It is triggered when the user starts dragging the flag.
 
 ## How the Game will look?
 ![image](https://github.com/user-attachments/assets/8c817fe3-b240-44ec-adfb-d7769e9b6c88)

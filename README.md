@@ -35,6 +35,7 @@ high-score.
 * This handler is triggered when the flag is dropped on a country shape. It checks for a correct match and updates the score if so.
 
 ## Closures
+* I used closures to manage the game timer, using the closure to access some variables so that it would update the time correctly. Thus, as time passed, I checked the value of the timeLeft variable. The closure allows each interval function to access the timeLeft variable so that each update occurs at the correct time.
 
 ## How the Game will look?
 ![image](https://github.com/user-attachments/assets/8c817fe3-b240-44ec-adfb-d7769e9b6c88)

@@ -37,6 +37,13 @@ high-score.
 ## Closures
 * I used closures to manage the game timer, using the closure to access some variables so that it would update the time correctly. Thus, as time passed, I checked the value of the timeLeft variable. The closure allows each interval function to access the timeLeft variable so that each update occurs at the correct time.
 
+## Document Object Model
+1- Dynamic Loading of Flags: 
+* At each stage of the game, the correct flags are generated as HTML elements and added to the DOM. This ensures that flags are constantly changing according to the user's correct guesses.<br>
+
+2- Score and Time Updates:
+* Game states such as score and time were instantly displayed in the DOM elements and feedback was given to the user. The score increased for each correct guess and decreased for each incorrect guess.
+
 ## How the Game will look?
 ![image](https://github.com/user-attachments/assets/8c817fe3-b240-44ec-adfb-d7769e9b6c88)
 

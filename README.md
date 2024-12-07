@@ -26,7 +26,13 @@ high-score.
 
 ## Three Event Handlers
 1- Drag Start Event (dragstart):
-* Purpose: This event handler is attached to each flag element. It is triggered when the user starts dragging the flag.
+* This event handler is attached to each flag element. It is triggered when the user starts dragging the flag. <br>
+
+2- Drag Over Incident (dragover):
+* This handler is triggered when a flag is dragged over a country shape (path element). It allows the flag to be dropped, preventing the default behaviour.<br>
+
+3- Drop Event (drop):
+* This handler is triggered when the flag is dropped on a country shape. It checks for a correct match and updates the score if so.
 
 ## How the Game will look?
 ![image](https://github.com/user-attachments/assets/8c817fe3-b240-44ec-adfb-d7769e9b6c88)

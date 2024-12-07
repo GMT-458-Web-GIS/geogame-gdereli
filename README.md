@@ -1,5 +1,7 @@
 ![alt text](https://www.freelogovectors.net/wp-content/uploads/2020/07/hacettepe-universitesi-logo-768x178.png)
 # GMT458 INTERNET BASED GEOGRAPHICAL INFORMATION SYSTEMS
+## GİZEM DERELİ 2200674060
+
 ### Github-Pages of the Game
  * https://gmt-458-web-gis.github.io/geogame-gdereli/
 ## Project Title: 
@@ -24,14 +26,19 @@ high-score.
   - Receive feedback on your guess and watch your score change.<br>
   - Click the "New Game" button to reset the game and try again.<br>
 ## JavaScript Library Used
-* D3.js library is used in the code. D3.js is a powerful JavaScript library for creating data visualisations and is widely used to create interactive charts, especially with SVG, HTML, and CSS.(https://d3js.org/what-is-d3,https://www.youtube.com/watch?v=iBecrPOjuB8&list=LL&index=2)
-* Leaflet.js library is used in the code. Leaflet is a lightweight and open source JavaScript library widely used for building interactive map applications. (https://leafletjs.com/,https://github.com/Gauravparajuli09/leaflet/blob/main/index.html)
+* D3.js library is used in the code. D3.js is a powerful JavaScript library for creating data visualisations and is widely used to create interactive charts, especially with SVG, HTML, and CSS.
+  - https://d3js.org/what-is-d3 <br>
+  - https://www.youtube.com/watch?v=iBecrPOjuB8&list=LL&index=2 <br>
+* Leaflet.js library is used in the code. Leaflet is a lightweight and open source JavaScript library widely used for building interactive map applications.
+  - https://leafletjs.com/ <br>
+  - https://github.com/Gauravparajuli09/leaflet/blob/main/index.html
 
 ## Requirements
 * HTML: Used to create the structure of the page.
 * CSS: Used to determine the style and layout of the page.
 * JavaScript: Used to create dynamic content and manage user interactions.
-* SVG:It is an XML-based file format and allows vector-based display of two-dimensional graphics on the web. (https://www.youtube.com/watch?v=l-9YQUmTOdI&list=LL&index=4&t=20s)
+* SVG:It is an XML-based file format and allows vector-based display of two-dimensional graphics on the web.
+  - https://www.youtube.com/watch?v=l-9YQUmTOdI&list=LL&index=4&t=20s
 
 ## Three Event Handlers
 1- Drag Start Event (dragstart):

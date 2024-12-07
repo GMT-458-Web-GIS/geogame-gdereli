@@ -34,6 +34,8 @@ high-score.
 3- Drop Event (drop):
 * This handler is triggered when the flag is dropped on a country shape. It checks for a correct match and updates the score if so.
 
+## Closures
+
 ## How the Game will look?
 ![image](https://github.com/user-attachments/assets/8c817fe3-b240-44ec-adfb-d7769e9b6c88)
 

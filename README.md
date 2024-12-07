@@ -23,6 +23,9 @@ high-score.
   - Click on the flag displayed to guess the country.<br>
   - Receive feedback on your guess and watch your score change.<br>
   - Click the "New Game" button to reset the game and try again.<br>
+## JavaScript Library Used
+* D3.js library is used in the code. D3.js is a powerful JavaScript library for creating data visualisations and is widely used to create interactive charts, especially with SVG, HTML, and CSS.
+* Leaflet.js library is used in the code. Leaflet is a lightweight and open source JavaScript library widely used for building interactive map applications.
 
 ## Three Event Handlers
 1- Drag Start Event (dragstart):

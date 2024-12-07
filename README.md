@@ -52,5 +52,8 @@ high-score.
 * Game states such as score and time were instantly displayed in the DOM elements and feedback was given to the user. The score increased for each correct guess and decreased for each incorrect guess.
 
 ## How the Game will look?
-![image](https://github.com/user-attachments/assets/8c817fe3-b240-44ec-adfb-d7769e9b6c88)
+![image](https://github.com/user-attachments/assets/83cb1752-a08b-410c-92b2-8e06e778ea68)
+![Uploading image.png…]()
+
+
 

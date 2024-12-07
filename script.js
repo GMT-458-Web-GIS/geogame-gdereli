@@ -243,7 +243,6 @@ function loadRandomFlag() {
     flagElement.classList.add("draggable");
     flagElement.alt = "Country Flag";
     flagElement.id = `flag-${flagImages[randomIndex].split(".")[0]}`; // Bayrak ID'sini ayarla
-
     flagContainer.appendChild(flagElement);
 
     // Taşınabilir bayrak için olay işleyici ekle

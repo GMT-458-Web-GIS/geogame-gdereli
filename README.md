@@ -53,7 +53,8 @@ high-score.
 
 ## How the Game will look?
 ![image](https://github.com/user-attachments/assets/83cb1752-a08b-410c-92b2-8e06e778ea68)
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/7ce70b20-6a1f-45e3-a89f-9ecc4a4fcfd8)
+
 
 
 

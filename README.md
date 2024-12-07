@@ -26,6 +26,10 @@ high-score.
 ## JavaScript Library Used
 * D3.js library is used in the code. D3.js is a powerful JavaScript library for creating data visualisations and is widely used to create interactive charts, especially with SVG, HTML, and CSS.
 * Leaflet.js library is used in the code. Leaflet is a lightweight and open source JavaScript library widely used for building interactive map applications.
+## Requirements
+* HTML: Used to create the structure of the page.
+* CSS: Used to determine the style and layout of the page.
+* JavaScript: Used to create dynamic content and manage user interactions.
 
 ## Three Event Handlers
 1- Drag Start Event (dragstart):

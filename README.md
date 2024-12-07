@@ -1,6 +1,7 @@
 ![alt text](https://www.freelogovectors.net/wp-content/uploads/2020/07/hacettepe-universitesi-logo-768x178.png)
 # GMT458 INTERNET BASED GEOGRAPHICAL INFORMATION SYSTEMS
-
+### Github-Pages of the Game
+ * https://gmt-458-web-gis.github.io/geogame-gdereli/
 ## Project Title: 
 * Flag Game
 

@@ -37,7 +37,7 @@ high-score.
 * HTML: Used to create the structure of the page.
 * CSS: Used to determine the style and layout of the page.
 * JavaScript: Used to create dynamic content and manage user interactions.
-* SVG:It is an XML-based file format and allows vector-based display of two-dimensional graphics on the web.
+* SVG: It is an XML-based file format and allows vector-based display of two-dimensional graphics on the web.
   - https://www.youtube.com/watch?v=l-9YQUmTOdI&list=LL&index=4&t=20s
 
 ## Three Event Handlers

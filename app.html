@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaflet Tutorial with Animation</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #222;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            z-index: 10; /* Butonun en üstte olmasını sağlar */
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        rect {
+            fill: transparent;
+            pointer-events: all;
+        }
+
+        circle {
+            stroke-width: 3.5px;
+        }
+
+        #map {
+            height: 100vh;
+            width: 100%;
+        }
+
+        .info {
+            padding: 6px 8px;
+            font: 14px/16px Arial, Helvetica, sans-serif;
+            background: white;
+            background: rgba(255,255,255,0.8);
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            border-radius: 5px;
+        }
+
+        .info h4 {
+            margin: 0 0 5px;
+            color: #777;
+        }
+
+        .legend {
+            line-height: 18px;
+            color: #555;
+        }
+
+        .legend i {
+            width: 18px;
+            height: 18px;
+            float: left;
+            margin-right: 8px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <a href="index.html">
+      <button>New Game</button>
+    </a>
+    
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script src="./data/line.js"></script>
+    <script src="./data/point.js"></script>
+    <script src="./data/polygon.js"></script>
+    <script src="./data/nepaldata.js"></script>
+    <script src="./data/usstates.js"></script>
+    
+    <script>
+        /*===================================================
+                        OSM  LAYER               
+        ===================================================*/
+
+        var map = L.map('map').setView([40.7128, -74.0060], 4);
+        var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        });
+        osm.addTo(map);
+
+        /*===================================================
+                        MARKER               
+        ===================================================*/
+
+        var singleMarker = L.marker([28.25255, 83.97669]).addTo(map);
+        var popup = singleMarker.bindPopup('This is a popup');
+        popup.addTo(map);
+
+        /*===================================================
+                        TILE LAYER               
+        ===================================================*/
+
+        var CartoDB_DarkMatter = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+            subdomains: 'abcd',
+            maxZoom: 19
+        });
+        CartoDB_DarkMatter.addTo(map);
+
+        // Google Map Layer
+        googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
+            maxZoom: 20,
+            subdomains:['mt0','mt1','mt2','mt3']
+        });
+        googleStreets.addTo(map);
+
+        // Satelite Layer
+        googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
+            maxZoom: 20,
+            subdomains:['mt0','mt1','mt2','mt3']
+        });
+        googleSat.addTo(map);
+
+        var Stamen_Watercolor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
+            attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            subdomains: 'abcd',
+            minZoom: 1,
+            maxZoom: 16,
+            ext: 'jpg'
+        });
+        Stamen_Watercolor.addTo(map);
+
+        /*===================================================
+                        GEOJSON               
+        ===================================================*/
+
+        var linedata = L.geoJSON(lineJSON).addTo(map);
+        var pointdata = L.geoJSON(pointJSON).addTo(map);
+        var nepalData = L.geoJSON(nepaldataa).addTo(map);
+        var polygondata = L.geoJSON(polygonJSON, {
+            onEachFeature: function(feature, layer){
+                layer.bindPopup('<b>This is a </b>' + feature.properties.name);
+            },
+            style: {
+                fillColor: 'red',
+                fillOpacity: 1,
+                color: 'green'
+            }
+        }).addTo(map);
+
+        /*===================================================
+                        LAYER CONTROL               
+        ===================================================*/
+
+        var baseLayers = {
+            "Satellite": googleSat,
+            "Google Map": googleStreets,
+            "Water Color": Stamen_Watercolor,
+            "OpenStreetMap": osm,
+        };
+
+        var overlays = {
+            "Marker": singleMarker,
+            "PointData": pointdata,
+            "LineData": linedata,
+            "PolygonData": polygondata
+        };
+
+        L.control.layers(baseLayers, overlays).addTo(map);
+
+        /*===================================================
+                        SEARCH BUTTON               
+        ===================================================*/
+
+        L.Control.geocoder().addTo(map);
+
+        /*===================================================
+                        ANIMATED CIRCLE               
+        ===================================================*/
+
+        // Animation for circle
+        var animatedCircle = L.circle([28.25255, 83.97669], {
+            color: 'red',
+            fillColor: '#f03',
+            fillOpacity: 0.5,
+            radius: 500
+        }).addTo(map);
+
+        animatedCircle.setRadius(0); // Start with radius 0
+
+        // Animate the circle's radius
+        function animateCircle() {
+            animatedCircle.setRadius(500); // Expand the radius
+        }
+
+        setTimeout(animateCircle, 1000); // Wait 1 second to start animation
+
+        /*===================================================
+                        NEW GAME BUTTON CLICK HANDLER               
+        ===================================================*/
+
+        // Buton tıklama olayını dinleyin
+        document.getElementById("newGameButton").addEventListener("click", function() {
+            window.location.href = 'bayrak3/index.html'; // Yönlendirmek istediğiniz sayfanın yolu
+        });
+
+    </script>
+    
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="app.js"></script>
+    
+</body>
+</html>

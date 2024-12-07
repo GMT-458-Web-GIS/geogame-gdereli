@@ -1,0 +1,132 @@
+/* Genel ayarlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Oyun konteyneri */
+#gameContainer {
+    position: relative;
+    width: 100%;
+    max-width: 1800px; /* Daha geniş sınır */
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Skor görüntüleme alanı */
+#scoreContainer {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    z-index: 1000; /* Üstte görünür olması için yüksek z-index */
+}
+
+#scoreContainer h2 {
+    margin: 0;
+}
+
+/* Bayrak görüntüleme alanı */
+#flagContainer {
+    position:absolute;
+    top: 200px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 2; /* Haritanın üstünde görünmesi için z-index */
+}
+
+.draggable {
+    width: 20px;
+    height: auto;
+    cursor: grab;
+    transition: transform 0.2s ease;
+}
+
+.draggable:active {
+    cursor: grabbing;
+    transform: scale(1.1);
+}
+
+/* Harita konteyneri */
+#mapContainer {
+    width: 100%; /* Tam genişlik */
+    height: auto; /* Yüksekliği ayarlayın */
+    overflow: visible; /* Taşmaları görünür yap */
+    position: relative; /* İçerik konumlandırma */
+    transition: transform 0.2s; /* Ölçek değişiminde yumuşak geçiş */
+    z-index: 1; /* Harita üzerindeki öğelere göre yüksek z-index */
+}
+
+/* Geri bildirim mesajı */
+#feedbackMessage {
+    font-size: 16px;
+    color: #333;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    position: absolute; /* Geri bildirim mesajının görünümü için */
+    bottom: 20px; /* Alt kısıma yerleştirme */
+    left: 50%; /* Ortalayarak yerleştirme */
+    transform: translateX(-50%); /* Gerçekten ortalamak için */
+    z-index: 1000; /* Üstte görünür olması için yüksek z-index */
+}
+
+/* SVG Harita ayarları */
+#allSvg {
+    width: 90vw; /* Ekranın %90 genişliğini kaplar */
+    height: auto; /* Oran korunur */
+    max-height: 85vh; /* Daha büyük dikey sınır */
+}
+
+.allPaths {
+    fill: #ececec;
+    stroke: #333;
+    transition: fill 0.3s;
+}
+
+.allPaths:hover {
+    fill: #a0c4ff;
+}
+.draggable {
+    width: 100px; /* Eski boyut 100px */
+    height: auto;
+    cursor: grab;
+    transition: transform 0.2s ease;
+}
+#newGameButton {
+    margin-top: 200px; /* Üstten boşluk */
+    padding: 10px 20px; /* İç boşluk */
+    font-size: 1.2em; /* Yazı boyutu */
+    background-color: #28a745; /* Yeşil arka plan */
+    color: white; /* Beyaz yazı rengi */
+    border: none; /* Kenar çizgisi yok */
+    border-radius: 5px; /* Köşeleri yuvarlat */
+    cursor: pointer; /* İşaretçi değişimi */
+}
+
+#newGameButton:hover {
+    background-color: #218838; /* Üzerine gelindiğinde koyu yeşil */
+}
